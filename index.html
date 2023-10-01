@@ -16,11 +16,11 @@
   </head>
   <body>
     <main>
-      <h1 class="main__sr-only">Newsletter Sign-up Form</h1>
+      <h1 class="sr-only">Newsletter Sign-up Form</h1>
       <section class="section section__main">
         <picture class="section__img-container">
           <source
-            media="(min-width: 768px)"
+            media="(min-width: 870px)"
             srcset="./assets/images/illustration-sign-up-desktop.svg" />
           <img
             src="./assets/images/illustration-sign-up-mobile.svg"
@@ -41,7 +41,7 @@
             </li>
             <li class="section__benefit">And much more!</li>
           </ul>
-          <form action="#" class="section__form">
+          <form action="#" class="form section__form">
             <div class="form__input-container">
               <label for="email" class="form__label"> Email address </label>
               <input
@@ -54,7 +54,7 @@
               <p
                 id="emailErrorMessage"
                 aria-live="polite"
-                class="form__error-message">
+                class="form__error-message form__error-message_hide">
                 Valid email required
               </p>
             </div>
@@ -64,7 +64,7 @@
           </form>
         </div>
       </section>
-      <section class="section section__success-state">
+      <section class="section section_hide section__success-state">
         <img
           src="./assets/images/icon-success.svg"
           alt=""
@@ -72,8 +72,10 @@
         <h2 class="section__heading">Thanks for subscribing!</h2>
         <p class="section__paragraph">
           A confirmation email has been sent to
-          <span>ash@loremcompany.com</span>. Please open it and click the button
-          inside to confirm your subscription.
+          <span class="section__paragraph--highlighted"
+            >ash@loremcompany.com</span
+          >. Please open it and click the button inside to confirm your
+          subscription.
         </p>
         <button class="btn section__btn">Dismiss message</button>
       </section>
