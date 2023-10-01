@@ -171,11 +171,20 @@ main {
   align-items: center;
   width: 100%;
   min-height: 100dvh;
+  overflow: hidden;
   background-color: var(--white);
+  box-shadow: var(--section-shadow);
 }
 
-.section {
-  box-shadow: var(--section-shadow);
+.section_reveal {
+  animation: show-card 0.6s cubic-bezier(0, 0.11, 0.68, 1.44);
+}
+
+@keyframes show-card {
+  from {
+    opacity: 0;
+    transform: translateY(100%) scaleX(0) scaleY(0);
+  }
 }
 
 .section__main {

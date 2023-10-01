@@ -41,12 +41,28 @@ const submitForm = () => {
 const showSuccessSection = () => {
   mainSection.classList.add('section_hide');
   successSection.classList.remove('section_hide');
+  successSection.classList.add('section_reveal');
+  successSection.addEventListener(
+    'animationend',
+    () => {
+      successSection.classList.remove('section_reveal');
+    },
+    { once: true }
+  );
   successStateLive = true;
 };
 
 const showMainSection = () => {
   successSection.classList.add('section_hide');
   mainSection.classList.remove('section_hide');
+  mainSection.classList.add('section_reveal');
+  mainSection.addEventListener(
+    'animationend',
+    () => {
+      mainSection.classList.remove('section_reveal');
+    },
+    { once: true }
+  );
   successStateLive = false;
 };
 
