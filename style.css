@@ -193,11 +193,17 @@ main {
 .section__heading {
   font-size: clamp(2.5rem, 5.5vw, 3.46rem);
   font-weight: var(--bold);
+  color: var(--dark-slate-grey);
   margin-bottom: 1.3rem;
 }
 
 .section__paragraph {
   margin-bottom: 1.3rem;
+}
+
+.section__paragraph--highlighted {
+  font-weight: var(--bold);
+  color: var(--dark-slate-grey);
 }
 
 .section__benefits {
@@ -307,10 +313,6 @@ main {
   width: 64px;
   height: 64px;
   margin-bottom: 1.5rem;
-}
-
-.section__paragraph--highlighted {
-  font-weight: var(--bold);
 }
 
 .section__btn {

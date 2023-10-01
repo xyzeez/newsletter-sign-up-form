@@ -17,6 +17,7 @@
   <body>
     <main>
       <h1 class="sr-only">Newsletter Sign-up Form</h1>
+      <!-- Main Section Starts -->
       <section class="section section__main">
         <picture class="section__img-container">
           <source
@@ -41,7 +42,7 @@
             </li>
             <li class="section__benefit">And much more!</li>
           </ul>
-          <form action="#" class="form section__form">
+          <form id="form" class="form section__form" novalidate>
             <div class="form__input-container">
               <label for="email" class="form__label"> Email address </label>
               <input
@@ -58,13 +59,18 @@
                 Valid email required
               </p>
             </div>
-            <button type="submit" class="btn form__btn">
+            <button type="submit" id="submitBtn" class="btn form__btn">
               Subscribe to monthly newsletter
             </button>
           </form>
         </div>
       </section>
-      <section class="section section_hide section__success-state">
+      <!-- Main section ends -->
+
+      <!-- Success section starts -->
+      <section
+        aria-live="polite"
+        class="section section_hide section__success-state">
         <img
           src="./assets/images/icon-success.svg"
           alt=""
@@ -72,13 +78,14 @@
         <h2 class="section__heading">Thanks for subscribing!</h2>
         <p class="section__paragraph">
           A confirmation email has been sent to
-          <span class="section__paragraph--highlighted"
+          <span id="emailValue" class="section__paragraph--highlighted"
             >ash@loremcompany.com</span
           >. Please open it and click the button inside to confirm your
           subscription.
         </p>
-        <button class="btn section__btn">Dismiss message</button>
+        <button id="clearBtn" class="btn section__btn">Dismiss message</button>
       </section>
+      <!-- Success section ends -->
     </main>
   </body>
 </html>
