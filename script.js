@@ -37,7 +37,6 @@ const submitForm = () => {
   emailValue.textContent = emailInput.value;
   form.target = 'hiddenFrame';
   form.submit();
-  console.log(hiddenFrame);
   form.target = '';
   flipSection();
 };
