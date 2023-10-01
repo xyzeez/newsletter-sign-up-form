@@ -7,6 +7,7 @@ const clearBtn = document.querySelector('#clearBtn');
 const mainSection = document.querySelector('.section__main');
 const successSection = document.querySelector('.section__success-state');
 const emailValue = document.querySelector('#emailValue');
+const hiddenFrame = document.querySelector('#hiddenFrame');
 
 // Variables
 let isValidEmail;
@@ -34,7 +35,10 @@ const validateEmail = () => {
 const submitForm = () => {
   const formData = new FormData(form);
   emailValue.textContent = emailInput.value;
-  emailInput.value = '';
+  form.target = 'hiddenFrame';
+  form.submit();
+  console.log(hiddenFrame);
+  form.target = '';
   flipSection();
 };
 
